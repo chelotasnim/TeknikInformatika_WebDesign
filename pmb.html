@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/image/uni-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>PMB | Teknik Informatika UNMORPH</title>
+</head>
+
+<body class="default-cursor default-theme">
+    <div class="loading-layer hide">
+        <div class="loading-icon">
+            <object data="assets/handmade-icon/handmade-loading.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="loading-content">
+            <div class="university-logo">
+                <img src="assets/image/uni-logo.png" draggable="false" />
+            </div>
+            <div class="prodi-name">
+                Teknik
+                <br>
+                Informatika
+                <br>
+                <span>Universitas Morphism</span>
+            </div>
+        </div>
+    </div>
+    <div class="page full-page info-wizard">
+        <div class="wizard">
+            <div class="wizard-section on-read">
+                <img src="assets/image/wizard-bg.png" draggable="false" />
+                <div class="wizard-shadow"></div>
+                <div class="content">
+                    <p>
+                        Teknik
+                        <br>
+                        Informatika
+                    </p>
+                    <span>
+                        Kami telah membuka peluang bagi anda untuk dapat bergabung dalam bagian Teknik Informatika
+                        Universitas Morphism
+                    </span>
+                    <div class="wizard-controller">
+                        <div onclick="directPage('jalur')" class="wizard-btn hover-element on">Jalur Pendaftaran</div>
+                        <div onclick="nextWizard(this)" class="wizard-btn hover-element">Langkah Pendaftaran ----</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard-section">
+                <img src="assets/image/wizard-bg.png" draggable="false" />
+                <div class="wizard-shadow"></div>
+                <div class="content">
+                    <p>
+                        Registrasi
+                        <br>
+                        Akun PMB Online
+                    </p>
+                    <span>
+                        Daftarkan akun pengguna pmb program studi Teknik Informatika untuk melanjutkan ke tahap
+                        pendaftaran berikutnya dengan akun yang telah anda daftarkan
+                    </span>
+                    <div class="wizard-controller">
+                        <div onclick="previousWizard(this)" class="wizard-btn hover-element">- Sebelumnya ---</div>
+                        <div onclick="nextWizard(this)" class="wizard-btn hover-element">- Berikutnya ---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard-section">
+                <img src="assets/image/wizard-bg-2.png" draggable="false" />
+                <div class="wizard-shadow"></div>
+                <div class="content">
+                    <p>
+                        Isi Formulir
+                        <br>
+                        Dan Unggah Berkas
+                    </p>
+                    <span>
+                        Selesaikan tahap utama dari pendaftaran anda yaitu pengisian formulir pendaftaran online dan
+                        unggah beberapa berkas yang dibutuhkan
+                    </span>
+                    <div class="wizard-controller">
+                        <div onclick="previousWizard(this)" class="wizard-btn hover-element">-- Sebelumnya --</div>
+                        <div onclick="nextWizard(this)" class="wizard-btn hover-element">-- Berikutnya --</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard-section">
+                <img src="assets/image/wizard-bg-3.png" draggable="false" />
+                <div class="wizard-shadow"></div>
+                <div class="content">
+                    <p>
+                        Ikuti
+                        <br>
+                        Ujian PMB
+                    </p>
+                    <span>
+                        Peserta penerimaan mahasiswa baru akan mengikuti tahapan ujian dan bukti hasil ujian akan
+                        dibutuhkan untuk melengkapi data pendaftaran
+                    </span>
+                    <div class="wizard-controller">
+                        <div onclick="previousWizard(this)" class="wizard-btn hover-element">--- Sebelumnya -</div>
+                        <div onclick="nextWizard(this)" class="wizard-btn hover-element">--- Berikutnya -</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wizard-section">
+                <img src="assets/image/wizard-bg-4.png" draggable="false" />
+                <div class="wizard-shadow"></div>
+                <div class="content">
+                    <p>
+                        Daftar
+                        <br>
+                        Ulang PMB
+                    </p>
+                    <span>
+                        Peserta yang dinyatakan lolos diwajibkan untuk melakukan daftar ulang dan sejumlah pembayaran
+                        yang ditentukan untuk menyelesaikan pendaftaran
+                    </span>
+                    <div class="wizard-controller">
+                        <div onclick="previousWizard(this)" class="wizard-btn hover-element">---- Sebelumnya</div>
+                        <div onclick="nextWizard(this)" class="wizard-btn hover-element">---- Berikutnya</div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-btn hover-element" onclick="directPage('index')">Kembali</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

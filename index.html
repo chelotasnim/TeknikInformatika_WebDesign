@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/image/uni-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Teknik Informatika | Universitas Morphism</title>
+</head>
+
+<body class="glowing default-theme">
+    <div class="loading-layer hide">
+        <div class="loading-icon">
+            <object data="assets/handmade-icon/handmade-loading.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="loading-content">
+            <div class="university-logo">
+                <img src="assets/image/uni-logo.png" draggable="false" />
+            </div>
+            <div class="prodi-name">
+                Teknik
+                <br>
+                Informatika
+                <br>
+                <span>Universitas Morphism</span>
+            </div>
+        </div>
+    </div>
+    <div class="cursor">
+        <object data="assets/handmade-icon/handmade-cursor.svg" type="image/svg+xml"></object>
+    </div>
+    <nav class="main-navigation">
+        <div class="extend-nav-comp left-content hover-element" onclick="showModal('main-navigation')">
+            <object data="assets/handmade-icon/handmade-grid.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="main">
+            <div class="nav-link left-link">
+                <span class="anchor-btn hover-element">
+                    <div class="anchor-effect"></div>
+                    Tentang
+                </span>
+                <span class="anchor-btn hover-element">
+                    <div class="anchor-effect"></div>
+                    Keunggulan
+                </span>
+                <span class="anchor-btn hover-element">
+                    <div class="anchor-effect"></div>
+                    Kompetensi
+                </span>
+            </div>
+            <div class="nav-label hover-element">
+                <p>Prodi Teknik</p>
+                <img src="assets/image/uni-logo.png" draggable="false" />
+                <p>Informatika</p>
+                <div class="nav-collapse hover-element" onclick="closeModal(this)">+</div>
+            </div>
+            <div class="nav-link right-link">
+                <span class="anchor-btn hover-element">
+                    <div class="anchor-effect"></div>
+                    Alumni
+                </span>
+                <span class="anchor-btn hover-element">
+                    <div class="anchor-effect"></div>
+                    Berita-PMB
+                </span>
+                <span onclick="directPage('pmb')" class="anchor-btn hover-element as-btn">
+                    <span class="bg"></span>
+                    Pendaftaran
+                </span>
+            </div>
+        </div>
+        <div onclick="showModal('customize-layer')" class="extend-nav-comp right-content hover-element">
+            <object data="assets/handmade-icon/handmade-lens.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="nav-line"></div>
+    </nav>
+    <div class="modal customize-layer ui-layer-settings">
+        <div class="pop-up">
+            <div class="pop-up-header">
+                <img src="assets/image/wireframe.png" draggable="false" />
+            </div>
+            <div class="pop-up-content">
+                <div class="pop-up-title">
+                    Pengaturan
+                    <label>*Semua pengaturan bersifat sementara</label>
+                </div>
+                <div class="pop-up-controller">
+                    <div class="controller-option">
+                        <span>
+                            <input onclick="uiSettings('default-cursor', 1)" class="hover-element" type="radio"
+                                name="cursor">Bawaan
+                        </span>
+                        <label>-- Cursor --</label>
+                        <span>
+                            Kustom
+                            <input onclick="uiSettings('default-cursor', 0)" class="hover-element" type="radio"
+                                name="cursor" checked>
+                        </span>
+                    </div>
+                    <div class="controller-option">
+                        <span>
+                            <input onclick="uiSettings('dark', 0)" class="hover-element" type="radio" name="tema"
+                                checked>Terang
+                        </span>
+                        <label>-- Tema --</label>
+                        <span>
+                            Gelap
+                            <input onclick="uiSettings('dark', 1)" class="hover-element" type="radio" name="tema">
+                        </span>
+                    </div>
+                    <div class="controller-option">
+                        <span>
+                            <input onclick="uiSettings('glowing', 1)" class="hover-element" type="radio" name="cahaya"
+                                checked>Nyala
+                        </span>
+                        <label>-- Efek Cahaya --</label>
+                        <span>
+                            Mati
+                            <input onclick="uiSettings('glowing', 0)" class="hover-element" type="radio" name="cahaya">
+                        </span>
+                    </div>
+                    <label>Pewarnaan</label>
+                    <div class="controller-option">
+                        <div class="color-box" onclick="uiSettings('default-theme', 2)"
+                            style="--color-pallete: rgb(0, 20, 90)">
+                            <input class="hover-element" name="color-theme" type="radio" value="Biru">
+                            #00145a
+                        </div>
+                        <div class="color-box" onclick="uiSettings('green-theme', 2)"
+                            style="--color-pallete: rgb(0, 150, 125)">
+                            <input class="hover-element" name="color-theme" type="radio" value="Hijau">
+                            #00967d
+                        </div>
+                        <div class="color-box" onclick="uiSettings('purple-theme', 2)"
+                            style="--color-pallete: rgb(100, 0, 125)">
+                            <input class="hover-element" name="color-theme" type="radio" value="Ungu">
+                            #64007d
+                        </div>
+                    </div>
+                </div>
+                <div class="close-btn hover-element" onclick="closeModal(this)">
+                    <span>+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page full-page home">
+        <div class="typo">
+            <p>TEKNIK</p>
+            <p>INFORMATIKA</p>
+            <p>MORPHISM</p>
+            <div class="quick-news-box">
+                <div class="news-date-box">
+                    <div class="news-info news-date">07</div>
+                    <div class="news-info news-month">05</div>
+                    <div class="news-slide slide-date"></div>
+                    <div class="news-slide slide-month"></div>
+                </div>
+                <div class="news-desc">
+                    <span>Terkini</span>
+                    <span class="hover-element">
+                        Penerimaan
+                        <br>
+                        Mahasiswa Baru
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stack-container">
+            <div class="image-wrapper image-little-piece">
+                <img src="assets/image/building.png" draggable="false" />
+                <div class="img-cover"></div>
+            </div>
+            <div class="image-wrapper image-big-piece open">
+                <img src="assets/image/building.png" draggable="false" />
+                <div class="img-cover"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page about">
+        <div class="about-grid">
+            <div class="lecturer-identity">
+                <div class="picture">
+                    <img src="assets/image/lecturer.png" draggable="false" />
+                    <div class="glass-effect"></div>
+                </div>
+                <div class="identity">
+                    <p>
+                        John
+                        <br>
+                        Lecturer.
+                    </p>
+                    <span>
+                        Ketua Program Studi
+                        <br>
+                        Teknik Informatika
+                    </span>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>
+                    Assalamu'alaikum wr.wb. Selamat datang di laman situs resmi Program Studi Teknik Informatika
+                    Universitas Morphism. Kami berharap laman situs ini dapat bermanfaat dan menjadi sumber referensi
+                    sebagai pertimbangan bagi para calon mahasiswa untuk bergabung bersama Teknik Informatika Unmorph
+                </p>
+                <br>
+                <p>
+                    Teknik Informatika merupakan salah satu dari program studi unggulan yang dimiliki oleh Universitas
+                    Morphism. Fasilitas dan tenaga pendidik yang amat sangat memadai dalam usaha kami untuk menjadi
+                    perguruan tinggi yang dapat memberikan manfaat seluas luasnya bagi masyarakat. Ayo dapatkan peluang
+                    menjadi bagian dari kami!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="page full-page poin">
+        <div class="page-header">
+            <strong class="medium-glow">Keunggulan</strong> Kami
+        </div>
+        <div class="poin-container">
+            <div class="poin-grid display-poin">
+                <div class="grid-number">
+                    <div class="rect box-medium-glow"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="poin-content">
+                    <div class="content-bg">
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                    </div>
+                    <div class="content-typo">
+                        <p>
+                            Hubungan
+                            <br>
+                            dunia luar yang luas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="poin-grid second-box">
+                <div class="grid-number">
+                    <div class="square"></div>
+                    <div class="rect box-medium-glow"></div>
+                    <div class="square"></div>
+                </div>
+                <div class="poin-content">
+                    <div class="content-bg">
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                    </div>
+                    <div class="content-typo">
+                        <p>
+                            Prospek Kerja
+                            <br>
+                            Yang Mampu Bersaing
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="poin-grid third-box">
+                <div class="grid-number">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="rect box-medium-glow"></div>
+                </div>
+                <div class="poin-content">
+                    <div class="content-bg">
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                        <div class="content-bg-row">
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                            <div class="content-bg-piece"></div>
+                        </div>
+                    </div>
+                    <div class="content-typo">
+                        <p>
+                            Tenaga Pendidik
+                            <br>
+                            Yang Bersertifikasi Ahli
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page full-page skill">
+        <div class="page-header">
+            <strong class="medium-glow">Kompetensi</strong> & Mata Kuliah
+        </div>
+        <div class="skill-container">
+            <div class="skill-window large-window">
+                <img src="assets/image/skill-window-bg-1.png" draggable="false" />
+                <div class="dark-glass"></div>
+                <div class="cover-title cover-typo">Pengetahuan Umum</div>
+                <div class="matkul-sum cover-typo">
+                    <div class="matkul-sum-num">
+                        8
+                    </div>
+                    <div class="matkul-label">
+                        Mata
+                        <br>
+                        Kuliah
+                    </div>
+                </div>
+                <div class="window-glass"></div>
+                <div class="window-btn">
+                    <span onclick="showModal('general-knowledge-modal')" class="as-btn revert hover-element">
+                        Lihat Mata Kuliah
+                    </span>
+                </div>
+            </div>
+            <div class="skill-window">
+                <img src="assets/image/skill-window-bg-2.png" draggable="false" />
+                <div class="dark-glass"></div>
+                <div class="cover-title cover-typo">Science & Matematika</div>
+                <div class="matkul-sum cover-typo">
+                    <div class="matkul-sum-num">
+                        6
+                    </div>
+                    <div class="matkul-label">
+                        Mata
+                        <br>
+                        Kuliah
+                    </div>
+                </div>
+                <div class="window-glass"></div>
+                <div class="window-btn">
+                    <span onclick="showModal('science-modal')" class="as-btn revert hover-element">
+                        Lihat Mata Kuliah
+                    </span>
+                </div>
+            </div>
+            <div class="skill-window">
+                <img src="assets/image/skill-window-bg-3.png" draggable="false" />
+                <div class="dark-glass"></div>
+                <div class="cover-title cover-typo">Kompetensi TI Dasar</div>
+                <div class="matkul-sum cover-typo">
+                    <div class="matkul-sum-num">
+                        6
+                    </div>
+                    <div class="matkul-label">
+                        Mata
+                        <br>
+                        Kuliah
+                    </div>
+                </div>
+                <div class="window-glass"></div>
+                <div class="window-btn">
+                    <span onclick="showModal('basic-it-modal')" class="as-btn revert hover-element">
+                        Lihat Mata Kuliah
+                    </span>
+                </div>
+            </div>
+            <div class="skill-window large-window">
+                <img src="assets/image/skill-window-bg-4.jpg" draggable="false" />
+                <div class="dark-glass"></div>
+                <div class="cover-title cover-typo">Kompetensi TI Utama</div>
+                <div class="matkul-sum cover-typo">
+                    <div class="matkul-sum-num">
+                        7
+                    </div>
+                    <div class="matkul-label">
+                        Mata
+                        <br>
+                        Kuliah
+                    </div>
+                </div>
+                <div class="window-glass"></div>
+                <div class="window-btn">
+                    <span onclick="showModal('main-it-modal')" class="as-btn revert hover-element">
+                        Lihat Mata Kuliah
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal skill-modal general-knowledge-modal">
+        <div class="pop-up">
+            <div class="skill-modal-card skill-title">
+                <div class="wrapper">
+                    <p>
+                        Pengetahuan
+                        <br>
+                        Umum.
+                    </p>
+                    <span>Mata Kuliah akademik dasar yang bersifat umum. Jajaran mata kuliah ini nilai sks nya tidak
+                        terlalu besar, namun diwajibkan untuk diajarkan pada mahasiswa.</span>
+                </div>
+            </div>
+            <div class="skill-modal-card subject-list">
+                <div class="wrapper">
+                    <p>-- Mata Kuliah --</p>
+                    <label>Bahasa Indonesia</label>
+                    <label>Bahasa Inggris</label>
+                    <label>Kewarganegaraan</label>
+                    <label>Ilmu Sosial Budaya Dasar</label>
+                    <label>Pendidikan Agama</label>
+                    <label>Etika Profesi</label>
+                    <label>Kewirausahaan & Manajemen</label>
+                    <label>Metode Penelitian</label>
+                </div>
+            </div>
+            <span>
+                <div onclick="closeModal(this)" class="hover-element elite-close-btn">
+                    <div class="cross-mark">+</div>
+                    Tutup
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="modal skill-modal science-modal">
+        <div class="pop-up">
+            <div class="skill-modal-card skill-title">
+                <div class="wrapper">
+                    <p>
+                        Science &
+                        <br>
+                        Matematika.
+                    </p>
+                    <span>Pelatihan dan penerapan logika diperlukan dalam Program Studi Teknik Informatika, Science dan
+                        Matematika dapat menjadi mata kuliah yang sesuai dalam peranan ini.</span>
+                </div>
+            </div>
+            <div class="skill-modal-card subject-list">
+                <div class="wrapper">
+                    <p>-- Mata Kuliah --</p>
+                    <label>Matematika Diskrit</label>
+                    <label>Logika Matematika</label>
+                    <label>Metode Numerik</label>
+                    <label>Aljabar Linear dan Matrix</label>
+                    <label>Kalkulus I & II</label>
+                    <label>Statistik</label>
+                </div>
+            </div>
+            <span>
+                <div onclick="closeModal(this)" class="hover-element elite-close-btn">
+                    <div class="cross-mark">+</div>
+                    Tutup
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="modal skill-modal basic-it-modal">
+        <div class="pop-up">
+            <div class="skill-modal-card skill-title">
+                <div class="wrapper">
+                    <p>
+                        Kompetensi
+                        <br>
+                        IT Dasar.
+                    </p>
+                    <span>Dasar kompetensi sebagai pengenalan dan materi teknis sebagai pengantar pada fokus
+                        pembelajaran Software Engineering pada program studi Teknik Informatika.</span>
+                </div>
+            </div>
+            <div class="skill-modal-card subject-list">
+                <div class="wrapper">
+                    <p>-- Mata Kuliah --</p>
+                    <label>Pengantar Teknologi Informasi</label>
+                    <label>Struktur Data</label>
+                    <label>Algoritma dan Pemrograman</label>
+                    <label>Organisasi Komputer</label>
+                    <label>Jaringan Komputer</label>
+                    <label>Multimedia</label>
+                </div>
+            </div>
+            <span>
+                <div onclick="closeModal(this)" class="hover-element elite-close-btn">
+                    <div class="cross-mark">+</div>
+                    Tutup
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="modal skill-modal main-it-modal">
+        <div class="pop-up">
+            <div class="skill-modal-card skill-title">
+                <div class="wrapper">
+                    <p>
+                        Kompetensi
+                        <br>
+                        IT Utama.
+                    </p>
+                    <span>Mata kuliah utama pada program studi Teknik Informatika, melakukan penerapan program dengan
+                        bahasa pemrograman dan praktikum terkait materi lainnya.</span>
+                </div>
+            </div>
+            <div class="skill-modal-card subject-list">
+                <div class="wrapper">
+                    <p>-- Mata Kuliah --</p>
+                    <label>Sistem Operasi</label>
+                    <label>Jaringan Komputer</label>
+                    <label>Arsitektur Komputer</label>
+                    <label>Pemrograman</label>
+                    <label>Basis Data</label>
+                    <label>Pemrograman Web</label>
+                    <label>UI Design</label>
+                </div>
+            </div>
+            <span>
+                <div onclick="closeModal(this)" class="hover-element elite-close-btn">
+                    <div class="cross-mark">+</div>
+                    Tutup
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="page full-page alumni">
+        <div class="alumni-typo">
+            <p>
+                Alumni
+                <br>
+                Hall of Fame
+            </p>
+            <span>
+                Teknik Informatika Universitas Morphism turut menciptakan figur figur unggulan yang memiliki prestasi
+                berharga.
+                Sebagai bukti eksistensi dari Teknik
+                Informatika
+                Universitas Morphism terhadap daya saing kompetensi dengan dunia luar
+            </span>
+        </div>
+        <div class="alumni-gallery">
+            <div class="carousel">
+                <div class="carousel-card skewed">
+                    <img src="assets/image/alumni-1.png" draggable="false" />
+                    <div class="alumni-identity-bg"></div>
+                    <div class="alumni-identity">
+                        <p>El Macho</p>
+                        <span>Manager IT Perusahaan Listrik</span>
+                    </div>
+                </div>
+                <div class="carousel-card first-card">
+                    <img src="assets/image/alumni-4.png" draggable="false" />
+                    <div class="alumni-identity-bg"></div>
+                    <div class="alumni-identity">
+                        <p>John Doe</p>
+                        <span>Founder & CEO PT Freelancer Jaya</span>
+                    </div>
+                </div>
+                <div class="carousel-card second-card">
+                    <img src="assets/image/alumni-2.png" draggable="false" />
+                    <div class="alumni-identity-bg"></div>
+                    <div class="alumni-identity">
+                        <p>Salvator</p>
+                        <span>IT Auditor PT Sakti Digital Marketing</span>
+                    </div>
+                </div>
+                <div class="carousel-card third-card">
+                    <img src="assets/image/alumni-5.png" draggable="false" />
+                    <div class="alumni-identity-bg"></div>
+                    <div class="alumni-identity">
+                        <p>W. Herrman</p>
+                        <span>Lead Robotics Engineer Angkatan Bersenjata</span>
+                    </div>
+                </div>
+                <div class="carousel-card fourth-card">
+                    <img src="assets/image/alumni-3.png" draggable="false" />
+                    <div class="alumni-identity-bg"></div>
+                    <div class="alumni-identity">
+                        <p>Silvia Jane</p>
+                        <span>Chief Server Engineer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page full-page news">
+        <div class="page-header">
+            Berita <strong class="medium-glow">PMB</strong>
+        </div>
+        <div class="news-container">
+            <div class="news-col">
+                <div class="timeline">
+                    <p><strong>Pendaftaran</strong></p>
+                    <span>01 Jul - 03 Sep 2023</span>
+                </div>
+                <div class="timeline">
+                    <p><strong>Seleksi</strong></p>
+                    <span>04 Sep 2023</span>
+                </div>
+                <div class="timeline">
+                    <p><strong>Pengumuman</strong></p>
+                    <span>06 Sep 2023</span>
+                </div>
+                <div class="timeline">
+                    <p><strong>Daftar Ulang</strong></p>
+                    <span>07 Sep 2023</span>
+                </div>
+            </div>
+            <div class="news-col">
+                <div class="registration-grid">
+                    <div class="pmb-label"><strong>Pendaftar :</strong></div>
+                    <div class="pmb-stat">100 <span>Peserta</span></div>
+                </div>
+                <div class="registration-grid">
+                    <div class="pmb-label"><strong>Total Kuota :</strong></div>
+                    <div class="pmb-stat">60 <span>Peserta</span></div>
+                </div>
+                <div class="registration-grid main-grid">
+                    <p>
+                        Ayo Bergabung!
+                        <br>
+                        <strong>Teknik Informatika UNMORPH</strong>
+                    </p>
+                    <span onclick="directPage('pmb')" class="hover-element as-btn">
+                        <span class="bg"></span>
+                        Cara Mendaftar
+                    </span>
+                </div>
+            </div>
+            <div class="news-col">
+                <div class="none-col"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-col footer-nav">
+            <span class="hover-element">Tentang Kami</span>
+            <span class="hover-element">Kompetensi dan Mata Kuliah</span>
+            <span class="hover-element">Keunggulan Prodi</span>
+        </div>
+        <div class="footer-col footer-content">
+            <div class="footer-title">
+                <p>Teknik Informatika</p>
+                <span>Universitas Morphism</span>
+            </div>
+            <div class="soc-med">
+                <a href="" class="soc-med-grid hover-element">
+                    <img src="assets/image/instagram-logo.png" draggable="false" />
+                </a>
+                <a href="" class="soc-med-grid hover-element">
+                    <img src="assets/image/twitter-logo.png" draggable="false" />
+                </a>
+                <a href="" class="soc-med-grid hover-element">
+                    <img src="assets/image/facebook-logo.png" draggable="false" />
+                </a>
+            </div>
+            <div class="contact">
+                <div class="footer-v-line"></div>
+                <label>Hubungi Kami</label>
+                <div class="contact-box">+62 896-1034-9508</div>
+                <div class="contact-box">ti@unmorphism.com</div>
+                <div class="contact-box">un_morph@unmorphism.com</div>
+                <div class="contact-box">JL. Hatetepe Rekues 200</div>
+            </div>
+            <div class="web-mark">
+                <div class="event">UNMORPH</div>
+                <div class="name">&copy; Teknik Informatika 2023</div>
+            </div>
+        </div>
+        <div class="footer-col footer-nav">
+            <span class="hover-element">Alumni Teknik Informatika</span>
+            <span class="hover-element">Berita Penerimaan Mahasiswa Baru</span>
+            <span class="hover-element">Pendaftaran Mahasiswa Baru</span>
+        </div>
+    </footer>
+    <div class="scroll-top hover-element">
+        <object data="assets/handmade-icon/handmade-arrow.svg" type="image/svg+xml"></object>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
